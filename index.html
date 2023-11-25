@@ -16,7 +16,7 @@
       padding: 0;
       box-sizing: border-box;
     }
-  
+
     html, body {
       width: 100%;
       height: 100%;
@@ -24,7 +24,7 @@
       overflow: hidden;
       font-family: 'Barlow Condensed', sans-serif;
     }
-  
+
     #main {
       display: flex;
       flex-direction: column;
@@ -52,7 +52,7 @@
     #ib {
       position: absolute;
       width: 60%;
-    
+
       border: none;
       border-radius: 10px;
       box-shadow: 0px 0px 5px 1px cyan;
@@ -66,9 +66,9 @@
       margin: 20px;
       top: 84%;
      max-height: 60px;
-      
+
     }
-  
+
     #inp {
       flex: 1;
       padding: 10px;
@@ -79,7 +79,7 @@
       outline: none;
       max-height: 60px;
     }
-  
+
     #btn {
       width: 20%;
       height: 50px;
@@ -95,7 +95,7 @@
       font-family: 'Barlow Condensed', sans-serif;
       animation: ic 10s infinite linear;
     }
-  
+
     #cont {
       display: flex;
       flex-direction: column;
@@ -129,9 +129,9 @@
       margin: 20px;
       max-width: 80%;
     }
-  
-  
-  
+
+
+
     #styles {
       display: flex;
       flex-wrap: wrap;
@@ -140,25 +140,25 @@
       max-width: 100%;
       margin: 20px;
     }
-  
+
     #styles div {
       text-align: center;
       flex: 1;
       max-width: 120px;
       margin-right: 18px;
     }
-  
+
     #styles img {
       max-width: 100%;
       height: auto;
     }
-  
+
     #styles p {
       color: rgb(184, 207, 200);
       font-weight: 1;
       font-size: 20px;
     }
-  
+
     h2 {
       color: #fdfdfd;
     }
@@ -176,7 +176,7 @@
      box-shadow:  "0px 0px 4px 1px rgb(205, 6, 223)";
     }
     #user{
-      
+
       padding: 10px;
       background-color: rgba(162, 253, 240, 0.3);
       width: auto;
@@ -214,7 +214,7 @@
 
     @media screen and (max-width: 740px) {
       #ib {
-        
+
         width: 90%;
         top: 85%;
       }
@@ -225,7 +225,7 @@
       #styles div {
         flex: 0;
         max-width: 100px;
-        
+
       }
       #cont{
         width: 94%;
@@ -246,7 +246,7 @@
       font-family: 'Barlow Condensed', sans-serif;
       padding: 6px;
       border: 2px solid  rgb(179, 12, 230);
-    
+
     border-radius: 4px;
     }
     #dp{
@@ -364,12 +364,12 @@ p{
 
 
   </style>
-  
-  
-  
+
+
+
   <div id="styles">
-    
-    
+
+
     <div id="ppt"><img src="" alt="" ><p>ChatWith-YourBrain</p></div>
     <div id="frnd"><img src="" alt=""><p>Friend</p></div>
     <div id="cod"><img src="" alt="" ><p>Coder</p></div>  
@@ -380,7 +380,7 @@ p{
     <div id="pdf"><img src="" alt="" ><p>PDFMaker</p></div>
   </div>
   <div id="cont">
-   
+
 <div id="code"></div>
   </div>
   <dialog id="myDialog">
@@ -388,7 +388,7 @@ p{
     <div id="db">
       <input type="text" id="in" placeholder="Enter Topic Here"><button id="bt">Submit</button>
     </div>
-   
+
     <div id="pc">
 <p id="ps"></p>
     </div>
@@ -398,13 +398,13 @@ p{
 
   <div id="main">
 
-    
+
 
     <div id="ib">
       <input type="text" id="inp" placeholder="enter here">
       <button id="btn">SUBMIT</button>
     </div>
-    
+
 
   </div>
   <style>
@@ -418,11 +418,11 @@ p{
   </p><br>
   <button id="joinDiscord">close</button>
 </dialog>
-  
+
 <script>
- 
+
     let dialogg = document.getElementById('myDialogx')
-      
+
     let joinDiscord = document.getElementById('joinDiscord')
     joinDiscord.onclick = function() {
         dialogg.innerHTML = ''
@@ -439,7 +439,7 @@ p{
     document.getElementById('bt').onclick = ()=>{
       var prompt = i.value;
       document.getElementById('ps').innerText = ' creating wait some seconds...'
-    
+
 
       fetch('https://favorableworrisomebot.mygyasir8.repl.co/api', {
     method: 'POST',
@@ -458,7 +458,7 @@ p{
     console.log(data.response2);
     console.log(data.response2); // This is how you access response2
     html2pdf().from(data.response2).set(pdf).save();
-    
+
     document.getElementById('ps').innerText = 'PDF downloaded SuccesFully :)'
     // rest of your code
 })
@@ -497,11 +497,11 @@ let ict = false
     div.addEventListener("click", function() {
       // Remove box shadow from all divs
       divs.forEach(d => d.style.boxShadow = "");
-      
+
       // Add box shadow to clicked div
       this.style.boxShadow = "0px 0px 4px 1px rgb(205, 6, 223)";
       if(this.id=='pdf'){
-        
+
    dialog.showModal();
 
         add = ''
@@ -510,7 +510,7 @@ let ict = false
         add = ''
         ict = false
         alert('coming soon!!!')
-        
+
       }
       if(this.id=='frnd'){
         add = ' act like my best friend very funny humorus helper awesome bestie very naughty cool '
@@ -534,10 +534,10 @@ let ict = false
         ict = false
         add = ' act like a poet write deep meaning poems and story,think great write something amazing ,be a critical and deep thinker write awesome be a great poet '
       }
-     
+
     });
   });
-  
+
 
   let txt = document.getElementById('inp')
 let his = []
@@ -578,9 +578,9 @@ inp.value = '';
 document.getElementById('btn').disabled = false;
 document.getElementById('btn').innerText = 'Send';
 
-            
-        
-            
+
+
+
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -596,13 +596,13 @@ document.getElementById('btn').onclick = ()=>{
   document.getElementById('btn').disabled = true;
   document.getElementById('btn').innerText = 'AI is thinking '
   sendPrompt(`${'user new question: ', inp.value}  ${add} ${his}  `)
- 
+
 }
 
 </script>
- 
+
 </body>
 </html>
 
- 
+
 
